@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Privacy Policy | Budget Tracker App</title>
+  <title>Privacy Policy | Mobile Application – General Privacy Disclosure</title>
+  <meta name="description" content="Universal privacy policy template for Android applications. Fully customizable, no data collection by default, compliant with Google Play Store requirements.">
   <style>
     * {
       margin: 0;
@@ -12,192 +13,333 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background-color: #f5f7fb;
-      color: #1e2a3e;
-      line-height: 1.5;
-      padding: 2rem 1rem;
+      background-color: #f4f7fc;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.55;
+      color: #1a2f3f;
+      scroll-behavior: smooth;
     }
 
-    .container {
-      max-width: 880px;
+    /* full screen container */
+    .privacy-container {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+    }
+
+    /* header with neutral gradient */
+    .privacy-header {
+      background: linear-gradient(135deg, #0c3345 0%, #13506a 100%);
+      color: white;
+      padding: 2rem 2rem 1.8rem 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .header-inner {
+      max-width: 1280px;
       margin: 0 auto;
-      background: white;
-      border-radius: 28px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.02);
-      overflow: hidden;
-      padding: 2rem 2rem 2.5rem 2rem;
+      width: 100%;
     }
 
-    @media (max-width: 640px) {
-      body {
-        padding: 1rem;
-      }
-      .container {
-        padding: 1.5rem;
-      }
+    .app-generic-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      padding: 0.25rem 1rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
     }
 
-    h1 {
-      font-size: 1.9rem;
+    .privacy-header h1 {
+      font-size: 2.2rem;
       font-weight: 600;
       letter-spacing: -0.3px;
-      color: #0f2b3d;
-      border-left: 5px solid #2c7da0;
+      margin-bottom: 0.4rem;
+    }
+
+    .privacy-header .tagline {
+      font-size: 1rem;
+      opacity: 0.88;
+      margin-top: 0.3rem;
+    }
+
+    .effective-date {
+      font-size: 0.85rem;
+      opacity: 0.8;
+      border-left: 3px solid #6db3c5;
       padding-left: 1rem;
-      margin-bottom: 1.8rem;
+      margin-top: 1rem;
     }
 
-    h2 {
-      font-size: 1.35rem;
+    /* main content */
+    .privacy-content {
+      flex: 1;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 4rem 2rem;
+      width: 100%;
+      background: #ffffff;
+    }
+
+    /* section styles */
+    .policy-section {
+      margin-bottom: 2.5rem;
+      scroll-margin-top: 2rem;
+    }
+
+    .policy-section h2 {
+      font-size: 1.6rem;
       font-weight: 600;
-      color: #1e4a6e;
-      margin: 1.6rem 0 0.8rem 0;
-      padding-top: 0.25rem;
-      border-bottom: 1px solid #e2edf2;
-      padding-bottom: 0.4rem;
+      color: #115e6e;
+      border-bottom: 2px solid #e2eff5;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.2rem;
     }
 
-    h3 {
-      font-size: 1.1rem;
+    .policy-section h3 {
+      font-size: 1.2rem;
       font-weight: 600;
-      color: #2c5a73;
-      margin: 1.2rem 0 0.5rem 0;
+      margin: 1.2rem 0 0.6rem 0;
+      color: #1f7180;
     }
 
-    p {
+    .policy-section p {
       margin-bottom: 1rem;
-      color: #2c3e4e;
+      font-size: 1rem;
+      color: #2a3e4c;
+      line-height: 1.6;
     }
 
-    .highlight-card {
-      background: #f0f9ff;
-      border-left: 4px solid #2c7da0;
-      padding: 1rem 1.3rem;
-      border-radius: 16px;
-      margin: 1.3rem 0;
+    .policy-section ul, .policy-section ol {
+      margin: 0.8rem 0 1.2rem 1.8rem;
     }
 
-    strong {
-      color: #0f3b4f;
-      font-weight: 600;
+    .policy-section li {
+      margin-bottom: 0.5rem;
+      color: #2a3e4c;
     }
 
-    a {
-      color: #2c7da0;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(44, 125, 160, 0.3);
-      transition: border-color 0.2s;
+    /* universal highlight boxes */
+    .data-notice {
+      background: #eef5f8;
+      border-left: 5px solid #2c7c8c;
+      padding: 1.2rem 1.6rem;
+      margin: 1.2rem 0;
+      border-radius: 14px;
     }
 
-    a:hover {
-      border-bottom-color: #2c7da0;
-      color: #1a5e7e;
+    .placeholder-warning {
+      background: #fef7e0;
+      border-left: 4px solid #e0a53e;
+      padding: 1rem 1.4rem;
+      margin: 1rem 0;
+      border-radius: 12px;
+      font-size: 0.95rem;
+    }
+
+    .contact-generic {
+      background: #f5fafd;
+      border-radius: 18px;
+      padding: 1.2rem 1.6rem;
+      margin: 1.2rem 0;
+      border: 1px solid #d9e6ef;
     }
 
     hr {
-      margin: 2rem 0 1rem;
+      margin: 2rem 0 1.5rem;
       border: none;
       height: 1px;
-      background: linear-gradient(90deg, #dce9ef, transparent);
+      background: #e1edf2;
     }
 
     .footer-note {
-      font-size: 0.85rem;
-      color: #5f7f95;
-      text-align: center;
-      margin-top: 2rem;
-      border-top: 1px solid #e9f0f3;
+      margin-top: 2.5rem;
       padding-top: 1.5rem;
+      border-top: 1px solid #e2edf2;
+      font-size: 0.85rem;
+      color: #607787;
+      text-align: center;
     }
 
-    .badge {
-      background-color: #eef2f5;
-      border-radius: 40px;
-      padding: 0.2rem 0.9rem;
-      font-size: 0.75rem;
-      font-weight: 500;
-      display: inline-block;
-      color: #2c7da0;
-      margin-bottom: 0.5rem;
+    @media (max-width: 768px) {
+      .privacy-header {
+        padding: 1.5rem 1.2rem;
+      }
+      .privacy-header h1 {
+        font-size: 1.8rem;
+      }
+      .privacy-content {
+        padding: 1.8rem 1.2rem 3rem 1.2rem;
+      }
+      .policy-section h2 {
+        font-size: 1.4rem;
+      }
+      .data-notice {
+        padding: 1rem;
+      }
     }
 
-    ul, .simple-list {
-      margin: 0.8rem 0 1rem 1.8rem;
+    @media print {
+      body {
+        background: white;
+      }
+      .privacy-header {
+        background: #0c3345;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
     }
-    li {
-      margin: 0.4rem 0;
+
+    a {
+      color: #1c7e8f;
+      text-decoration: none;
+      border-bottom: 1px solid #cddee5;
+    }
+    a:hover {
+      color: #0d5767;
+      border-bottom: 1px solid #0d5767;
+    }
+
+    strong {
+      color: #165f6b;
+    }
+
+    .editable-bracket {
+      background: #eef2f5;
+      padding: 0.1rem 0.3rem;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-<div class="container">
-  <span class="badge">📱 Budget Tracker · Privacy First</span>
-  <h1>Privacy Policy</h1>
-  <p><strong>Effective date: May 29, 2026</strong><br>
-  This privacy policy applies to the <strong>Budget Tracker</strong> mobile application (the "Application") for mobile devices, together with any related services operated by <strong>Nikhil Kumar</strong> (the "Service Provider", "we", "our", or "us").</p>
-  
-  <p>Your privacy is important to us. This document explains what information the Application accesses, how we treat data, and your rights. We have designed Budget Tracker with privacy in mind — the Application does not collect, store, or share any personal data through normal usage.</p>
-
-  <!-- 1. Information collection -->
-  <h2>1. What information does the Application obtain and how is it used?</h2>
-  <p>The Application <strong>does not collect, log, or store any personal information</strong> when you download and use it. Registration is not required, and we do not ask for your name, email address, financial account numbers, or any other identifiers. Budget Tracker operates with minimal data processing.</p>
-  <p>If you use the Application while connected to the internet, standard technical protocol data (such as an ephemeral IP address) is transmitted temporarily to facilitate network connectivity. However, the Service Provider does <strong>not retain, monitor, or process</strong> this data for any purpose — it is not stored in logs, nor used for analytics, fingerprinting, or tracking. No persistent identifiers are linked to your device.</p>
-  <div class="highlight-card">
-    ⚡ <strong>Zero personal data collection by default:</strong> All expense records, budgets, and categories you enter are saved exclusively on your local device. We have no remote servers that receive your financial information.
+<div class="privacy-container">
+  <div class="privacy-header">
+    <div class="header-inner">
+      <div class="app-generic-badge">Android Application Privacy Disclosure</div>
+      <h1>Privacy Policy</h1>
+      <div class="tagline">Transparent, user-first privacy practices for your mobile application</div>
+      <div class="effective-date">Effective date: [Insert Date] | Last revised: [Insert Date]</div>
+    </div>
   </div>
 
-  <!-- 2. Location -->
-  <h2>2. Does the Application collect precise real-time location information?</h2>
-  <p><strong>No.</strong> This Application does not request, access, or collect precise or approximate location data from your mobile device. No GPS, network-based, or Bluetooth location information is ever acquired by the Application.</p>
+  <main class="privacy-content">
+    <!-- generic introduction -->
+    <div class="policy-section">
+      <p>This Privacy Policy describes how [Developer Name / Company Name] ("we", "our", "us", or "Service Provider") handles information when you use our mobile application (the "Application"). We respect your privacy and are committed to being transparent about any data practices. Depending on the specific app you are using, this policy outlines the default zero-data collection approach or any optional permissions you may grant. For most of our applications, we adhere to a strict privacy-first design: no unnecessary data collection, no third-party tracking, and full local control.</p>
+      <div class="data-notice">
+        <strong>Universal Privacy Commitment:</strong> Unless explicitly stated otherwise inside a specific app's feature, the Application does not collect, store, or share any personal information. Any data you create (notes, files, preferences) remains on your device by default. We do not operate remote servers to receive your personal content.
+      </div>
+      <p>Please read this policy carefully. By using the Application, you acknowledge that you have read and understood this Privacy Policy. If you do not agree with any part of this policy, please discontinue use of the Application immediately.</p>
+    </div>
 
-  <!-- 3. Third parties -->
-  <h2>3. Do third parties see and/or have access to information obtained by the Application?</h2>
-  <p>Since the Application does not collect, store, or transmit any personal data through normal operation, no information is shared with third parties. There are no third-party analytics SDKs, advertising frameworks, crash reporters, or data aggregators embedded in Budget Tracker. Your privacy remains fully under your control.</p>
-  <p>If you voluntarily reach out to the Service Provider via email (as described below), any information you choose to share (e.g., feedback or support queries) is handled confidentially and will never be sold, rented, or shared for marketing.</p>
+    <!-- SECTION 1: Information collection -->
+    <div class="policy-section">
+      <h2>1. Information Collection and Use</h2>
+      <p><strong>No automatic data collection:</strong> The Application is designed not to collect, log, or transmit any personally identifiable information unless a specific optional feature (such as cloud backup or sync) is explicitly enabled by you. In the baseline configuration, the Application does not request your name, email address, location, contacts, or device identifiers.</p>
+      <p>If the Application requires internet connectivity for certain features (e.g., fetching public updates or displaying online content), standard technical data such as ephemeral IP addresses may be temporarily used to facilitate network communication. However, the Service Provider does not retain, monitor, or store this data in logs nor link it to any persistent identifier. No analytics, fingerprinting, or tracking mechanisms are employed.</p>
+      <p><strong>Local storage only:</strong> Any content you generate (documents, media, game progress, preferences, or entries) is saved exclusively on your device's internal storage or external storage (if you grant storage permission). The Application does not automatically upload, sync, or share your local files with any remote server unless you explicitly initiate a backup or export function that you control.</p>
+    </div>
 
-  <!-- 4. Opt-out rights -->
-  <h2>4. What are my opt-out rights?</h2>
-  <p>Because Budget Tracker does not collect personal information during normal use, you do not need to "opt out" of any data collection. If you wish to remove the Application completely, simply uninstall it from your mobile device using the standard removal process of your operating system. Uninstalling will delete all locally stored budget records, and no residual data remains elsewhere.</p>
-  <p><strong>Voluntary correspondence:</strong> If you have previously contacted the Service Provider directly (via email or support form) and wish to request deletion of that correspondence or any personal information you voluntarily provided, you may contact us at <strong>nikhildev012nk@gmail.com</strong>. We will honor deletion requests promptly in accordance with applicable privacy laws.</p>
+    <!-- SECTION 2: Permissions -->
+    <div class="policy-section">
+      <h2>2. App Permissions and Their Use</h2>
+      <p>The Application may request certain Android permissions to deliver core features. Permissions are never used to collect personal data without your knowledge. Below is a generic description of possible permissions and how they are used responsibly:</p>
+      <ul>
+        <li><strong>Internet permission:</strong> Used only for features that require connectivity (e.g., downloading updates, fetching license validation, or accessing online help). No personal information is transmitted to any server unless you are using an explicit online feature (such as a webview or API call that you trigger).</li>
+        <li><strong>Storage permission (read/write external storage):</strong> Used to save or access user-generated files (e.g., exporting reports, saving photos, or loading documents). All operations are user-initiated, and files remain under your control.</li>
+        <li><strong>Camera or microphone permission:</strong> Used only for specific functionality such as scanning a QR code, capturing an image for profile purposes, or recording audio within the app session. No media is transmitted off-device without your explicit action.</li>
+        <li><strong>Location permission (fine/coarse):</strong> If present, location is used exclusively for features that require geolocation (e.g., local weather, maps, or location-based reminders). Location data is processed on-device and never stored or shared with the Service Provider or third parties unless you choose to share it.</li>
+      </ul>
+      <p>Permissions are requested at runtime (Android 6.0+) and you may deny or revoke any permission without affecting the core functionality unless the permission is essential for the feature.</p>
+    </div>
 
-  <!-- 5. Children's privacy -->
-  <h2>5. Children’s Privacy</h2>
-  <p>The Application is not directed toward children under the age of 13 (or such higher minimum age as required by local law). The Service Provider does not knowingly collect or solicit personal information from children. Because the Application itself <strong>does not collect any personal data through its core functionality</strong>, there is no risk of unintentional data collection from minors during normal use. However, if a child under 13 attempts to voluntarily contact us via email, a parent or legal guardian must provide consent where required by law before we process any communication.</p>
-  <p>If you believe that a child has provided personal information to us through unofficial channels, please contact us immediately, and we will delete that information.</p>
+    <!-- SECTION 3: Third-party services -->
+    <div class="policy-section">
+      <h2>3. Third-Party Access and SDKs</h2>
+      <p>By default, this Application contains no third-party analytics, advertising, or crash reporting SDKs unless explicitly described in the app's store listing. We prioritize privacy by avoiding trackers. In the case where an app version includes optional third-party libraries (e.g., for ad-supported free versions or Firebase Cloud Messaging), we will:</p>
+      <ul>
+        <li>List all third-party SDKs within the app's description or within this policy.</li>
+        <li>Ensure that such SDKs comply with data protection laws and only collect minimal necessary data with your consent.</li>
+        <li>Provide a clear opt-out or consent mechanism before any data collection begins.</li>
+      </ul>
+      <p>If you are using a version of the Application that includes no external SDKs, rest assured that no third parties receive any information from the Application. The Service Provider does not sell, rent, or trade any user information.</p>
+      <div class="placeholder-warning">
+        <strong>Note for developers:</strong> If your app uses any third-party services (Google Analytics, AdMob, Facebook SDK, Crashlytics, etc.), you must list them here and update the policy accordingly. This generic template assumes zero third-party data sharing unless otherwise stated.
+      </div>
+    </div>
 
-  <!-- 6. Security -->
-  <h2>6. Security</h2>
-  <p>Because Budget Tracker does not collect or transmit personal data over networks, the risk of exposure is extremely low. All user-generated data (budgets, transaction entries) resides exclusively on your mobile device and is not accessible by the Service Provider or any external party. We encourage users to apply device-level security measures (such as screen locks, encryption, or secure backups) to further protect locally stored information.</p>
-  <p>For any information you voluntarily provide via email or support requests, we implement commercially reasonable technical, organizational, and administrative safeguards to protect against unauthorized access, alteration, or disclosure.</p>
+    <!-- SECTION 4: Location data -->
+    <div class="policy-section">
+      <h2>4. Location Information</h2>
+      <p>The Application does not collect real-time location information unless a specific feature requires it and you provide explicit permission. If location access is requested, it is used solely for the feature you activate (e.g., displaying nearby points of interest). Location data is never stored persistently or transmitted to the Service Provider's servers. You can disable location permissions at any time via Android settings.</p>
+    </div>
 
-  <!-- 7. Data breach notification -->
-  <h2>7. Data Breach Notification</h2>
-  <p>Given that the Application does not collect, store, or process any personal data during regular usage, the likelihood of a data breach affecting your privacy is negligible. If, despite our safeguards, any breach occurs involving data that you voluntarily provided to us (such as email correspondence), we will notify affected individuals as required under applicable data protection laws (including, where mandated, within 72 hours or without undue delay). Notifications will be made via email or through a prominent notice on our support channels.</p>
+    <!-- SECTION 5: Opt-out rights -->
+    <div class="policy-section">
+      <h2>5. Your Opt-Out Rights and Device Control</h2>
+      <p>Because the Application collects no personal information during normal usage, you do not need to opt out of data collection. If you wish to remove the Application entirely, uninstall it using the standard Android uninstallation process. Uninstalling will delete all locally stored data associated with the app (documents, settings, progress). No residual data remains on our side.</p>
+      <p><strong>Voluntary communications:</strong> If you contact us via email or support form and provide personal information (e.g., name or email address), you may request deletion of that correspondence at any time by emailing our contact address. We will honor deletion requests promptly.</p>
+    </div>
 
-  <!-- 8. Changes to Privacy Policy -->
-  <h2>8. Changes to this Privacy Policy</h2>
-  <p>The Service Provider may update this Privacy Policy from time to time to reflect operational, legal, or regulatory changes. We will notify you of material changes by posting the revised Privacy Policy within the Application (if technically feasible) or through an update notice. The “Effective date” at the top of this policy will be revised accordingly. Where required by applicable law, we will obtain your consent to material changes before they become effective.</p>
-  <p>Previous versions of this Privacy Policy will be retained and made available upon request. Please contact us at <strong>nikhildev012nk@gmail.com</strong> if you need to access an earlier version.</p>
+    <!-- SECTION 6: Children's privacy -->
+    <div class="policy-section">
+      <h2>6. Children's Privacy</h2>
+      <p>The Application is not directed to children under the age of 13 (or the applicable age of consent in your region). The Service Provider does not knowingly collect personal information from children. Since the Application's default behavior collects no data whatsoever, there is no risk of accidental data collection. If you believe a child has provided us with personal information through unofficial channels (e.g., direct email), please contact us, and we will delete that information.</p>
+    </div>
 
-  <!-- 9. Consent and withdrawal -->
-  <h2>9. Your Consent & Withdrawal Rights</h2>
-  <p>By using Budget Tracker, you signify your acceptance of this Privacy Policy. If you voluntarily provide information to the Service Provider (for instance, by sending an email inquiry) and we rely on your consent for processing that information, you have the right to withdraw your consent at any time. Withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal. To withdraw consent, please email us at <strong>nikhildev012nk@gmail.com</strong>.</p>
+    <!-- SECTION 7: Security -->
+    <div class="policy-section">
+      <h2>7. Data Security</h2>
+      <p>We take security seriously. Because the Application does not transmit your personal data over networks, the primary security risk lies in device-level access. We recommend that you keep your Android device updated, use screen locks, and avoid rooting your device if you store sensitive information. For any voluntary correspondence, we implement commercially reasonable measures to protect against unauthorized access, disclosure, or alteration.</p>
+    </div>
 
-  <!-- 10. Contact -->
-  <h2>10. Contact Us</h2>
-  <p>If you have any questions, concerns, or requests regarding this Privacy Policy, the Application’s privacy practices, or if you need to exercise your privacy rights, please contact the Service Provider via email:</p>
-  <p style="background: #f7fafc; padding: 0.7rem 1rem; border-radius: 14px; font-family: monospace; word-break: break-all;">
-    📧 <strong>nikhildev012nk@gmail.com</strong>
-  </p>
-  <p>We will respond to legitimate requests within a reasonable timeframe and in accordance with applicable data protection laws.</p>
+    <!-- SECTION 8: Data breach notification -->
+    <div class="policy-section">
+      <h2>8. Data Breach Notification</h2>
+      <p>Given the zero-data-collection nature of this Application (or minimal data collected only with explicit user action), the likelihood of a privacy breach affecting you is extremely low. If, despite all safeguards, a breach occurs involving any information you voluntarily provided to us (e.g., email support threads), we will notify affected individuals as required by applicable law. Notifications will be made via email or a prominent notice on our official website.</p>
+    </div>
 
-  <hr>
+    <!-- SECTION 9: Changes to this Policy -->
+    <div class="policy-section">
+      <h2>9. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal obligations. If we make material changes, we will notify you by updating the "Effective date" at the top of this policy and, where feasible, by posting a notice within the Application. Your continued use of the Application after the changes become effective constitutes your acceptance of the revised policy. If you do not agree, please discontinue use and uninstall the Application.</p>
+      <p>Previous versions of this Privacy Policy are available upon request by contacting us at the email provided below.</p>
+    </div>
 
-  <div class="footer-note">
-    This Privacy Policy was generated with transparency best practices and is maintained by Nikhil Kumar.<br>
-    Budget Tracker does not contain any third-party tracking or analytics. Your data stays on your device — always.
-  </div>
+    <!-- SECTION 10: Consent and withdrawal -->
+    <div class="policy-section">
+      <h2>10. Your Consent and Withdrawal Rights</h2>
+      <p>By using the Application, you consent to the data practices described in this Privacy Policy. If you have voluntarily provided information (e.g., via email) and we process it based on your consent, you may withdraw your consent at any time by contacting us. Withdrawal does not affect the lawfulness of processing before withdrawal.</p>
+    </div>
+
+    <!-- SECTION 11: Contact Information -->
+    <div class="policy-section">
+      <h2>11. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy, or if you need to exercise any privacy rights, please contact the Service Provider:</p>
+      <div class="contact-generic">
+        <strong>Developer / Company Name:</strong> Nikhil<br>
+        <strong>Email:</strong> <a href="mailto:nikhildev012nk+privacy@gmail.com">nikhildev012nk+privacy@gmail.com</a><br>
+        <strong>Postal Address (optional):</strong> Mohali,Punjab (India)<br>
+        <strong>Response Time:</strong> We aim to respond to legitimate privacy inquiries within 5 to 10 business days.
+      </div>
+      <p>For users in the European Economic Area, the United Kingdom, or Switzerland, you may have the right to lodge a complaint with your local data protection authority. We encourage you to contact us first to resolve any issue.</p>
+    </div>
+
+    <!-- final universal assurance -->
+    <hr>
+    <div class="footer-note">
+      <strong>Universal Privacy Policy for Android Apps</strong> — This document serves as a template. Customize the placeholders (bracketed text) and add specific details about your app's features, third-party SDKs, or data collection practices if applicable. By default, this policy asserts that the Application collects no data unless stated otherwise.
+      <br><br>
+      © <script>Date.getFullYear()</script> Nikhil. All rights reserved. This policy is effective as of the date listed above.
+    </div>
+  </main>
 </div>
 </body>
 </html>
